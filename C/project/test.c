@@ -39,7 +39,8 @@ int main(){
 		printAnimals(); // 동물 위치 출력
 		printQuestion(); // 문제 출력 (카드 지도)
 		printf("뒤집을 카드를 2개 고르세요: ");
-		scanf_s("%d %d", &select1, &selcet2);
+		fgets(select1, sizeof(select1), stdin);
+		fgets(select2, sizeof(select2), stdin);
 
 		if(select1 == select2){ // 같은 카드 선택 시 무효
 			continue;
@@ -55,7 +56,7 @@ int main(){
 		int secondSelect_y = conv_pos_y(select2);
 
 		// 같은 동물인 경우
-		if(checkAnimal[firstSelect_x][firstSelect_y] == 0 && checkAnimal[secondSelcet_x][secondSlect_y] == 0) && (arrayAnimal[firstSelect_x][firstSelect_y] == arrayAnimal[secondSelect_x][secondSelect_y]){
+		if(checkAnimal[firstSelect_x][firstSelect_y] == 0 && checkAnimal[secondSelect_x][secondSelect_y] == 0) && (arrayAnimal[firstSelect_x][firstSelect_y] == arrayAnimal[secondSelect_x][secondSelect_y]){
 			printf("\n\n 빙고! : %s 발견\n\n", strAnimal[arrayAnimal[firstSelect_x][firstSelect_y]]);
 			checkAnimal[firstSelect_x][firstSelect_y] = 1;
 			checkAnimal[secondSelect_x][secondSelect_y] = 1;
@@ -73,6 +74,7 @@ int main(){
 			printf("\n\n 축하합니다 ! 모든 동물을 다 찾았네요 \n");
 			printf("지금까지 총 %d 번 실수하였습니다");
 		}
+	}
 
 	return 0;
 }
@@ -119,7 +121,7 @@ int getEmptyPosition(){
 	while(1){
 		int randPos = rand() % 20; // 0 ~ 19 사이의 숫자 반환
 		int x = conv_pos_x(randPos);
-		int y = conv_pos_y(rnadPos);
+		int y = conv_pos_y(randPos);
 
 		if(arrayAnimal[x][y] == -1){
 			return randPos;
