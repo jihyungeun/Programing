@@ -10,9 +10,9 @@
 #define MAX 10000 // 소스코드 어디에서나 MAX는 10000이라는 상수 정의
 
 int main() { // main 함수 선언
-	char password[20]; // 비밀번호 입력
-	char line[MAX]; // 파일에서 불러온 내용을 저장할 변수
-	char contents[MAX]; // 극비문서에 입력할 내용
+	char password[20]; // 입력한 비밀번호를 저장하기 위해 배열 선언
+	char line[MAX]; // 파일에서 불러온 내용을 저장해줄 배열 선언
+	char contents[MAX]; // 사용자가 추가한 내용을 저장해줄 배열 선언
 	int i = 0;
 	char c; // 비밀번호 입력할 때 키값 확인용
 	int choice = 0; // 선택지 확인용
@@ -66,14 +66,14 @@ int main() { // main 함수 선언
 				printf("%s", line);
 			}
 
-			printf("\n\n ==== 수정하거나 추가할 내용이 더 없으면 EXIT를 입력하십시오. ==== \n\n"); // 문서를 저장하고 나오는 방법을 안내해주는 문장을 출력
+			printf("\n\n ==== 추가할 내용이 더 없으면 EXIT를 입력하십시오. ==== \n\n"); // 문서를 저장하고 나오는 방법을 안내해주는 문장을 출력
 
 			while (1) {
 				scanf("%[^\n]", contents); // 새 줄(\n)이 나오기 전까지 모두 읽음(한 문장)
 				getchar(); // Enter 입력 시 flush 처리
 
 				if (strcmp(contents, "EXIT") == 0) { // "EXIT"를 입력했다면
-					printf("극비문서 내용 추가를 종료합니다."); // 종료
+					printf("극비문서에 내용 추가를 종료합니다."); // 종료
 					break;
 				}
 				fputs(contents, file);
@@ -88,6 +88,6 @@ int main() { // main 함수 선언
 	else { // 사용자가 1, 2, 3, 4, 777 이외의 숫자를 입력했다면
 		printf(" ==== 선택지에 없는 숫자 입니다. ====\n"); // 의미없는 문장을 출력하고 프로그램 종료
 	}
-
+	system("pause");
 	return 0;
 }
