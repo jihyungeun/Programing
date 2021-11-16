@@ -1,7 +1,7 @@
 #define _CRT_SECURE_NO_WARNINGS
 // scanf, strcpy, fopen 등을 사용할 때 Warning C4996 Error 로 부터 방지하기 위해
 #include<stdio.h> // C 표준 라이브러리 중 하나인 stdio.h 라는 헤더 파일에 선언된 내용을 포함(stdio == standard input output)
-#include<string.h>
+#include<string.h> // 문자열을 다루기 위해 string.h 헤더 파일을 포함
 
 // 비밀번호를 입력 받아서
 // 맞는 경우? 비밀 문서를 읽어와서 보여주고 극비 문서에 내용을 추가할 수 있도록 해준다.
@@ -37,7 +37,7 @@ int main() { // main 함수 선언
 	}
 	else if (choice == 777) { // 사용자가 777을 입력했다면
 		while (1) {
-			c = getch();
+			c = getch(); // 한 글자 씩 받아서 c에 저장
 			if (c == 13) { // Enter 입력 시
 				password[i] = '\0';
 				break;
