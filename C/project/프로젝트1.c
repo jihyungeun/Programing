@@ -1,5 +1,4 @@
-#define _CRT_SECURE_NO_WARNINGS
-// scanf, strcpy, fopen 등을 사용할 때 Warning C4996 Error 로 부터 방지하기 위해
+#define _CRT_SECURE_NO_WARNINGS // scanf, strcpy, fopen 등을 사용할 때 Warning C4996 Error 로 부터 방지하기 위해
 #include<stdio.h> // C 표준 라이브러리 중 하나인 stdio.h 라는 헤더 파일에 선언된 내용을 포함(stdio == standard input output)
 #include<string.h> // 문자열을 다루기 위해 string.h 헤더 파일을 포함
 
