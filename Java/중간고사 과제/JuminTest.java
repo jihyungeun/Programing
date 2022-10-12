@@ -3,7 +3,7 @@ public class JuminTest {
 
 	public static void main(String[] args) {
 	      Scanner scan = new Scanner(System.in);
-	      String month = "", day = "", gender = "", TK = "";
+	      String month = "", day = "", gender = "", dow = "";
 	      int year2 = 0;
 	      
 	      System.out.print("이름을 입력하세요. ==> ");
@@ -21,9 +21,7 @@ public class JuminTest {
 
 	      month = info.substring(3, 4);
 	      day = info.substring(5, 6);
-	      TK = info.substring(9);
-	      
-	      System.out.println("--------" + TK);
+	      char TK = info.charAt(8);
 	      
 	      if (ch == '1') {
 	         year2 = 1900+age;
@@ -42,40 +40,40 @@ public class JuminTest {
 	         age = 2022-(1900+age)+1;
 	      }
 	      
-	      if (TK == "0") {
-	    	  TK = "서울";
+	      if (TK == '0') {
+	    	  dow = "서울";
 	      }
-	      else if (TK == "1") {
-	    	  TK = "인천, 경기";
+	      else if (TK == '1') {
+	    	  dow = "인천, 경기";
 	      }
-	      else if (TK == "2") {
-	    	  TK = "강원";
+	      else if (TK == '2') {
+	    	  dow = "강원";
 	      }
-	      else if (TK == "3") {
-	    	  TK = "충북";
+	      else if (TK == '3') {
+	    	  dow = "충북";
 	      }
-	      else if (TK == "4") {
-	    	  TK = "충남, 대전";
+	      else if (TK == '4') {
+	    	  dow = "충남, 대전";
 	      }
-	      else if (TK == "5") {
-	    	  TK = "경북, 대구";
+	      else if (TK == '5') {
+	    	  dow = "경북, 대구";
 	      }
-	      else if (TK == "6") {
-	    	  TK = "경남, 부산, 울산";
+	      else if (TK == '6') {
+	    	  dow = "경남, 부산, 울산";
 	      }
-	      else if (TK == "7") {
-	    	  TK = "전북";
+	      else if (TK == '7') {
+	    	  dow = "전북";
 	      }
-	      else if (TK == "8") {
-	    	  TK = "광주, 전남";
+	      else if (TK == '8') {
+	    	  dow = "광주, 전남";
 	      }
-	      else if (TK == "9") {
-	    	  TK = "제주";
+	      else if (TK == '9') {
+	    	  dow = "제주";
 	      }
 	      
 	      System.out.println("=============================================");
 	      System.out.println(name + "씨는 생일이 " + year2 + "년" + month + "월" + day + "일이고");
-	      System.out.println(gender + "으로 출생지는 " + TK + "입니다.");
+	      System.out.println(gender + "으로 출생지는 " + dow + "입니다.");
 	}
 }
 
