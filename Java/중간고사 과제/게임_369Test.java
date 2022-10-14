@@ -1,26 +1,32 @@
 import java.util.Scanner;
-public class °ÔÀÓ_369Test {
+public class Main {
 
-	public static void main(String[] args) {
-		Scanner scan = new Scanner(System.in);
-		System.out.print("1-99±îÁöÀÇ Á¤¼ö¸¦ ÀÔ·ÂÇÏ¼¼¿ä. ==> ");
-		int num = scan.nextInt();
-		
-		if(num==3 || num==6 || num ==9) {
-			System.out.println("¹Ú¼öÂ¦");
-		}
-		else if(num >= 10) {
-			if((num%10) == 3 || (num%10) == 6 || (num%10) == 9) {
-				if(num/10 == 3 || num/10 == 6 || num/10 == 9)
-					System.out.println("¹Ú¼öÂ¦Â¦");
-				else
-					System.out.println("¹Ú¼öÂ¦");
-			}
-			else if(num/10 == 3 || num/10 == 6 || num/10 == 9)
-				System.out.println("¹Ú¼öÂ¦");
-		}
-		
-	}
+   public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
+     for(int i=0; i<10; i++){
+       System.out.print("1-99ê¹Œì§€ì˜ ì •ìˆ˜ë¥¼ ì…ë ¥í•˜ì„¸ìš”. ==> ");
+      int num = scan.nextInt();
+      
+      if(num==3 || num==6 || num ==9) {
+         System.out.println("ë°•ìˆ˜ì§");
+      }
+      else if(num!=3 || num!= 6 || num!=9){
+        System.out.print("ë");
+        break;
+      }
+      else if(num >= 10) {
+         if((num%10) == 3 || (num%10) == 6 || (num%10) == 9) {
+            if(num/10 == 3 || num/10 == 6 || num/10 == 9)
+               System.out.println("ë°•ìˆ˜ì§ì§");
+            else
+               System.out.println("ë°•ìˆ˜ì§");
+         }
+         else if(num/10 == 3 || num/10 == 6 || num/10 == 9)
+            System.out.println("ë°•ìˆ˜ì§");
+      }
+      
+    }
+  }
+     
 
 }
-46573374564¤¸45¤µ4¤£¤¤¤¼¤·4¤¡¤­¤¾¤¾¤¼4¤£
